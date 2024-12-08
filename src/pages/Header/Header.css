@@ -1,0 +1,25 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem;
+    background-color: #000000;
+}
+.leftContainer{
+    background-color: #000000;
+}
+.centerContainer{
+    background-color: #000000;
+}
+.logoImg{
+    width: 2.5rem;
+}
+.rightContainer{
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 500px) {
+    header{
+        display: none;
+    }
+}

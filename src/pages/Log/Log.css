@@ -1,0 +1,107 @@
+.Log {
+    background-color: black;
+    height: 100vh;
+    color: black;
+  }
+  
+  .logContainer {
+    padding-top: 6rem;
+  }
+  
+  .loginText {
+    padding-bottom: 2rem;
+    color: white;
+  }
+  
+  .Log div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .UserIdInput {
+    all: unset;
+    padding: 0.8rem;
+    width: 18rem;
+    margin: 0.5rem;
+    border-radius: 5rem;
+    color: rgb(255, 255, 255);
+    background-color: #1f1f1f;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .logInputs {
+    margin-top: 1rem;
+  }
+  
+  .logInputs p {
+    font-size: small;
+    color: #b3b3b3;
+    width: 100%;
+    padding-left: 2rem;
+  }
+  
+  .UserIdInput:hover {
+    background-color: #858585;
+  }
+  
+  .UserIdInput:focus {
+    background-color: #2a2a2a;
+  }
+  
+  .passwordContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .togglePassword {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    top: 1rem;
+  }
+  
+  .togglePassword:hover {
+    text-decoration: underline;
+  }
+  
+  .logBtn {
+    all: unset;
+    background-color: blue;
+    color: white;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    border-radius: 5rem;
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .logBtn:hover {
+    background-color: rgb(36, 36, 255);
+  }
+  
+  @media (max-width: 500px) {
+    .UserIdInput {
+      width: 70%;
+    }
+    .logBtn {
+      width: 70%;
+    }
+    .logInputs p {
+      width: 80%;
+    }
+    .togglePassword{
+        right: 2rem;
+    }
+  }
+  

@@ -1,0 +1,37 @@
+.LogInBtn{
+    all:unset;
+    width: 5rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 5rem;
+    height: 6vh;
+    font-size: large;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), 
+              background-color 0.3s ease, 
+              color 0.3s ease;
+}
+
+.signInBtn{
+    all:unset;
+    background-color: rgb(70, 29, 255);
+    width: 5rem;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    font-size: large;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), 
+              background-color 0.3s ease, 
+              color 0.3s ease;
+}
+
+.LogInBtn:hover{
+    transform: scale(1.1);
+}
+
+.signInBtn:hover{
+    transform: scale(1.1);
+}
+

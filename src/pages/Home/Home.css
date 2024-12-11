@@ -1,3 +1,6 @@
 .panels{
     display: flex;
 }
+.SearchPage{
+    color: rgb(0, 0, 0);
+}

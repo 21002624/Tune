@@ -11,7 +11,9 @@ const Search = () => {
     }
   return (
     <div className='searchInputContainer'>
-        <HomeIcon className="homeIcon" />
+        <div className='searchIconDiv'>
+            <HomeIcon className="homeIcon" />
+        </div>
         <div className="searchBox">
             {searchText ? 
                 (<XMarkIcon className='searchIcon' onClick={handleSearch} />)
@@ -26,7 +28,9 @@ const Search = () => {
                 onChange={(e)=> setSearchText(e.target.value) } 
             />
         </div>
-        <FolderIcon className="homeIcon" />
+        <div className='searchIconDiv'>
+            <FolderIcon className="homeIcon" />
+        </div>
     </div>
   )
 }

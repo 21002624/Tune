@@ -45,3 +45,19 @@
 .homeIcon:hover{
     background-color: #2a2a2a;
 }
+
+@media (max-width:800px) {
+    .searchIconDiv{
+        display: none;
+    }
+    .searchInputContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .SearchInput{
+        width: 100%;
+    }
+}

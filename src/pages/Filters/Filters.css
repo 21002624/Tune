@@ -1,0 +1,34 @@
+.Filters{
+    margin-top: 1px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.Filters div{
+    display: flex;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filterBtn{
+    height: 30px;
+    background-color: rgb(62, 62, 62);
+    border-radius: 20px;
+    width: 100px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filterBtn:hover{
+    background-color: rgb(109, 109, 109);
+}
+
+.filterBtn:focus{
+    background-color: rgb(109, 109, 109);
+}

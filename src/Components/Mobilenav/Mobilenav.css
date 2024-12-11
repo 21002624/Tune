@@ -1,0 +1,29 @@
+.Mobilenav{
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 1999; 
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: .5rem;
+    height: 40px;
+    gap: 30%;
+}
+.mobNavIcon{
+    display: block;
+}
+
+@media (min-width: 800px) {
+    .Mobilenav{
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .Mobilenav{
+        gap: 10%;
+    }
+}

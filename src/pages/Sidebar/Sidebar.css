@@ -1,0 +1,66 @@
+.Sidebar{
+    background-color: #121212;
+    border-radius: 10px;
+    height: 76vh;
+    margin: .11%;
+    width: 14%;
+    display: flex;
+    justify-content: center;
+}
+
+.Sidebar div{
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+}
+.recentBar p{
+    text-align: left;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.libraryBar p{
+    text-align: left;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.sideBarIcon{
+    width: 20px;
+}
+
+@media (max-width: 800px) {
+    .Sidebar{
+        width: 100%;
+        border-radius: 0;
+        height: 99vh;
+        margin: 0;
+        padding: 1rem;
+    }
+    .recentBar div{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .libraryBar div{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .sideBarIcon{
+        display: none;
+    }
+    .recentBar div p{
+        margin: 5px;
+        background-color: rgb(46, 46, 46);
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .libraryBar div p{
+        margin: 5px;
+        background-color: rgb(46, 46, 46);
+        padding: 5px;
+        border-radius: 5px;
+    }
+}

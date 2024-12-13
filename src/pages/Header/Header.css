@@ -6,6 +6,8 @@ header{
 }
 .leftContainer{
     background-color: #000000;
+    display: flex;
+    gap: 1rem;
 }
 .centerContainer{
     background-color: #000000;

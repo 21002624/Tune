@@ -24,6 +24,7 @@ const Header = () => {
     <header>
         <div className="leftContainer">
             <img className='logoImg' src={logo} alt='logoImg' />
+            <h2>tune</h2>
         </div>
         <div className="centerContainer">
             <Search />

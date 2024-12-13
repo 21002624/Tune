@@ -1,7 +1,7 @@
 .Sidebar{
-    background-color: #121212;
+    background: linear-gradient(to bottom left, rgb(0, 0, 41), black);
     border-radius: 10px;
-    height: 76vh;
+    height: 76.5vh;
     margin: .11%;
     width: 14%;
     display: flex;
@@ -15,15 +15,19 @@
 }
 .recentBar p{
     text-align: left;
-    padding-top: 5%;
+    padding-top: 10%;
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
+.libraryBar h2{
+    padding-top: 10%;
+}
+
 .libraryBar p{
     text-align: left;
-    padding-top: 5%;
+    padding-top: 10%;
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -31,6 +35,33 @@
 .sideBarIcon{
     width: 20px;
 }
+
+.animatedText {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    font-size: 1rem; 
+    color: #ffffff; 
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .animatedText:hover,
+  .animatedText:focus {
+    transform: scale(1.1); 
+    color: rgb(255, 255, 255); 
+  }
+  
+  .sideBarIcon {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .animatedText:hover .sideBarIcon,
+  .animatedText:focus .sideBarIcon {
+    transform: rotate(20deg); 
+    color: #0020be; 
+  }
+  
 
 @media (max-width: 800px) {
     .Sidebar{

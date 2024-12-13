@@ -1,9 +1,23 @@
 .Rightpanel{
     color: rgb(255, 255, 255);
-    background-color: black;
+    background: linear-gradient(to bottom , rgb(0, 0, 41), black);
     width: 20%;
     margin: 2px;
     border-radius: 10px;
+    height: 76vh;
+    overflow: auto;
+    overflow-x: hidden; 
+}
+
+/* Hide the scrollbar */
+.Rightpanel::-webkit-scrollbar {
+    width: 0;  
+    height: 0; 
+}
+
+.Rightpanel {
+    -ms-overflow-style: none;  /* Disable scrollbar for IE and Edge */
+    scrollbar-width: none; /* Disable scrollbar for Firefox */
 }
 .rightpanelDetails{ 
     display: flex;
@@ -13,6 +27,55 @@
 .coverImage{
     width: 90%;
     border-radius: 10px;
+}
+.Rightpaneltitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.coverImgDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightSongDetailsDiv{
+    width: 100%;
+}
+
+.rightSongDetailsDiv div{
+    margin: 1rem;
+}
+.rightSongMiniDiv{
+    width: 90%;
+    background: linear-gradient(to right, rgb(31, 31, 31), rgb(34, 34, 34));
+    border-radius: 10px;
+    padding: .5rem;
+}
+.rightSongMiniTitleDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.rightSongCreditsDiv{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.rightIcon{
+    width: 24px;
+  height: 24px;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.rightSongQueue{
+    width: 90%;
+    margin: 2%;
 }
 
 @media (max-width:800px) {
@@ -24,12 +87,6 @@
     }
     .coverImage{
         width: 70%;
-    }
-    .rightpanelDetails{
-        margin-top: 2rem;
-    }
-    .rightpanelDetails div{
-        margin-top: 2rem;
     }
     .Rightpaneltitle{
         padding-top: 10px;

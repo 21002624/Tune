@@ -9,6 +9,11 @@
   font-style: normal;
 }
 
-h2{
-  color: rgb(3, 91, 255);
+
+h2 {
+  font-size: 2rem; 
+  font-weight: bold; 
+  background: linear-gradient(to right, #4a90e2, #d4145a); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

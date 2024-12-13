@@ -13,6 +13,8 @@ const Home = () => {
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isMobile, setIsMobile] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedOption, setSelectedOption] = useState('');
+  
 
   // Check if the view is mobile
   useEffect(() => {
@@ -53,7 +55,7 @@ const Home = () => {
         <>
           {/* Mobile View */}
           <div className="MobileView">{renderMobilePage()}</div>
-          <Playingsong currentSong={currentSong} setCurrentSong={setCurrentSong} />
+          <Playingsong currentSong={currentSong} setCurrentSong={setCurrentSong} onOptionSelect={handleOptionSelect}  selectedOption={selectedOption} />
           <Mobilenav onOptionSelect={handleOptionSelect} />
         </>
       ) : (

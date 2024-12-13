@@ -3,12 +3,45 @@ import { songs } from '../../Data/songs';
 import './Playingsong.css';
 import { ChevronUpIcon, ChevronDownIcon, PlayIcon, PauseIcon, ChevronRightIcon, ChevronLeftIcon, SpeakerXMarkIcon, SpeakerWaveIcon } from '@heroicons/react/24/outline';
 
-const Playingsong = ({ currentSong, setCurrentSong }) => {
+const Playingsong = ({ currentSong, setCurrentSong , onOptionSelect ,selectedOption }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
     const [volume, setVolume] = useState(1);
     const [isLooping, setIsLooping] = useState(false);
     const [progress, setProgress] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
+    
+    
+
+    const [isMobile, setIsMobile] = useState(false); 
+    const checkMobileView = () => {
+        setIsMobile(window.matchMedia('(max-width: 800px)').matches);
+    };
+    
+    useEffect(() => {
+        if (selectedOption === 'currentSong') {
+            setIsVisible(false);
+        } else {
+            setIsVisible(true);
+        }
+    }, [selectedOption]);
+    
+    const handleMobileClick = (event) => {
+        if (event.target === event.currentTarget && isMobile) {
+            console.log('Mobile view click detected!');
+            onOptionSelect('currentSong');
+
+        }
+    };
+
+    useEffect(() => {
+        checkMobileView();
+        window.addEventListener('resize', checkMobileView);
+
+        return () => {
+            window.removeEventListener('resize', checkMobileView);
+        };
+    }, []);
 
     const audioRef = useRef(null);
 
@@ -98,7 +131,12 @@ const Playingsong = ({ currentSong, setCurrentSong }) => {
     }, []);
 
     return (
-        <div className="custom-audio-player">
+        <>{isVisible && (
+            <div
+            className={`custom-audio-player ${isMobile ? 'mobile' : ''}`}
+            onClick={handleMobileClick} 
+        >
+            
             <div className="partOne">
                 <p>{currentSong.songName}</p>
             </div>
@@ -107,6 +145,7 @@ const Playingsong = ({ currentSong, setCurrentSong }) => {
                     <source src={currentSong.filePath} type="audio/mpeg" />
                     Your browser does not support the audio element.
                 </audio>
+                
                 <div className="controls">
                     <div>
                         <button onClick={playPreviousSong} className="control-btn">
@@ -131,22 +170,25 @@ const Playingsong = ({ currentSong, setCurrentSong }) => {
                         </button>
                     </div>
                 </div>
-                <div className="progress-bar">
-                    <span>{formatTime(progress)}</span>
-                    <div className="progressDiv">
-                        <input
-                            type="range"
-                            className="progress-slider"
-                            min="0"
-                            max="100"
-                            step="0.1"
-                            value={audioRef.current?.duration ? (progress / audioRef.current.duration) * 100 : 0}
-                            onChange={handleSeek}
-                        />
+                
+                    <div className="progress-bar">
+                        <span>{formatTime(progress)}</span>
+                        <div className="progressDiv">
+                            <input
+                                type="range"
+                                className="progress-slider"
+                                min="0"
+                                max="100"
+                                step="0.1"
+                                value={audioRef.current?.duration ? (progress / audioRef.current.duration) * 100 : 0}
+                                onChange={handleSeek}
+                            />
+                        </div>
+                        <span>{formatTime(audioRef.current?.duration || 0)}</span>
                     </div>
-                    <span>{formatTime(audioRef.current?.duration || 0)}</span>
-                </div>
+                
             </div>
+            
             <div className="partThree">
                 <div>
                     <div className="muteDiv">
@@ -167,7 +209,10 @@ const Playingsong = ({ currentSong, setCurrentSong }) => {
                     </div>
                 </div>
             </div>
+            
         </div>
+        )}
+        </>
     );
 };
 

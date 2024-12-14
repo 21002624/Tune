@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { songs } from '../../Data/songs';
 import './Playingsong.css';
-import { ChevronUpIcon, ChevronDownIcon, PlayIcon, PauseIcon, ChevronRightIcon, ChevronLeftIcon, SpeakerXMarkIcon, SpeakerWaveIcon } from '@heroicons/react/24/outline';
+import { ChevronUpIcon, XMarkIcon, PlayIcon, PauseIcon, ChevronRightIcon, ChevronLeftIcon, SpeakerXMarkIcon, SpeakerWaveIcon } from '@heroicons/react/24/outline';
 
 const Playingsong = ({ currentSong, setCurrentSong , onOptionSelect ,selectedOption }) => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -147,13 +147,22 @@ const Playingsong = ({ currentSong, setCurrentSong , onOptionSelect ,selectedOpt
                 </audio>
                 
                 <div className="controls">
-                    <div>
+                    <div className='ControlsDiv'>
                         <button onClick={playPreviousSong} className="control-btn">
                             <ChevronLeftIcon />
                         </button>
-                        <button onClick={togglePlayPause} className="control-btn">
-                            {isPlaying ? <PauseIcon /> : <PlayIcon />}
-                        </button>
+
+                        <div className="mobilePlayingSongName">
+                            <p>{currentSong.songName}</p>
+                        </div>
+                        <div className='mobilePlayingSongControls'>
+                            <button onClick={togglePlayPause} className="play-control-btn">
+                                {isPlaying ? <PauseIcon /> : <PlayIcon />}
+                            </button>
+
+                            <XMarkIcon className="rightCloseIcon"/>
+                        </div>
+
                         <button onClick={playNextSong} className="control-btn">
                             <ChevronRightIcon />
                         </button>

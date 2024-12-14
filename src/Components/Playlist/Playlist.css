@@ -1,0 +1,56 @@
+.playlist-container {
+    padding: 1rem;
+    background: linear-gradient(to bottom right, rgb(0, 0, 41), black);
+    height: 100vh;
+}
+
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+  
+  .tab {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #a0abc1; 
+    color: #374151; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab:hover {
+    background-color: #3b82f6; /* Blue hover */
+    color: white;
+  }
+  
+  .tab.active {
+    background-color: #3b82f6; /* Active tab blue */
+    color: white;
+  }
+  
+  .playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .playlist-item {
+    text-align: center;
+  }
+  
+  .playlist-cover {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .playlist-title {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #374151;
+  }
+  

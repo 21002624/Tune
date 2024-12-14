@@ -11,6 +11,7 @@ import Search from '../../Components/Search/Search';
 import { useAuth } from '../../Components/AuthProvider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import User from '../User/User';
+import Playlist from '../../Components/Playlist/Playlist';
 
 const Home = () => {
   const [currentSong, setCurrentSong] = useState(songs[0]);
@@ -55,6 +56,8 @@ const Home = () => {
         return <Rightpanel currentSong={currentSong} />;
       case 'user':
         return <User />;
+      case 'playlist':
+        return <Playlist />;
       default:
         return <Sidebar />;
     }

@@ -36,3 +36,48 @@
 .userFollowerFollowing p{
     font-size: small;
 }
+
+.userMusicDetailsDiv {
+    padding: .5rem;
+    border-radius: 0.5rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .userMusicDetailsDiv > div {
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    width: 120px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .totalHours {
+    background-color: #3b82f6; /* Blue */
+  }
+  
+  .likedSongs {
+    background-color: #22c55e; /* Green */
+  }
+  
+  .followingArtists {
+    background-color: #8b5cf6; /* Purple */
+  }
+  
+  .playlists {
+    background-color: #fbbf24; /* Yellow */
+  }
+  
+  .userMusicDetailsDiv h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .userMusicDetailsDiv p {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  

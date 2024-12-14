@@ -29,6 +29,26 @@ const User = () => {
           <Cog8ToothIcon className='rightIcon' />
         </div>
       </div>
+
+      <div className="userMusicDetailsDiv">
+        <div className="totalHours">
+          <h4>Total Hours Listened</h4>
+          <p>120 hrs</p>
+        </div>
+        <div className="likedSongs">
+          <h4>Liked Songs</h4>
+          <p>54 songs</p>
+        </div>
+        <div className="followingArtists">
+          <h4>Following Artists</h4>
+          <p>18 artists</p>
+        </div>
+        <div className="playlists">
+          <h4>Playlists</h4>
+          <p>8 playlists</p>
+        </div>
+      </div>
+
     </div>
   )
 }

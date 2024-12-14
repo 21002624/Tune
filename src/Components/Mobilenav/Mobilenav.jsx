@@ -23,7 +23,7 @@ const Mobilenav = ({ onOptionSelect }) => {
     <div className='Mobilenav'>
       <div onClick={() => onOptionSelect('home')}><HomeIcon className="rightIcon"/></div>
       <div onClick={() => onOptionSelect('search')}><MagnifyingGlassIcon className="rightIcon"/></div>
-      <div onClick={() => onOptionSelect('home')}><UserCircleIcon className="rightIcon"/></div>
+      <div onClick={() => onOptionSelect('user')}><UserCircleIcon className="rightIcon"/></div>
     </div>
   );
 };

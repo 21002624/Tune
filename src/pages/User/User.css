@@ -1,0 +1,38 @@
+.User{
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgb(0, 0, 41), black);
+}
+
+.vedioDiv{
+    width: 100%;
+    border-radius: 0 0 50% 50%;
+}
+.UserImgDiv{
+    width: 30%;
+    border-radius: 50%;
+    margin-right: 4%;
+    background: linear-gradient(to bottom right, rgb(0, 0, 41), black);
+}
+.userDetailsDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    gap: 10%;
+}
+.userFollowerFollowing{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+.userTopRow{
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+.userSettingDiv{
+    align-items: flex-start;
+}
+.userFollowerFollowing p{
+    font-size: small;
+}

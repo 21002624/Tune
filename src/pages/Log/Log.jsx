@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './Log.css';
-import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../Components/AuthProvider/AuthProvider';
 
 const Log = () => {
   const [userId, setUserId] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
+  const { login } = useAuth();
 
-  const LogIn = () => {
+  const handleLogin = () => {
     if (userId === 'admin' && userPassword === 'admin') {
-      navigate('/');
+      login(userId); 
     } else {
       alert('Invalid username or password');
     }
@@ -52,7 +52,7 @@ const Log = () => {
               </button>
             </div>
           </div>
-          <button className="logBtn" onClick={LogIn}>
+          <button className="logBtn" onClick={handleLogin}>
             Login
           </button>
           <p>Forgot password?</p>

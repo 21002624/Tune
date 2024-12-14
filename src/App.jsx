@@ -1,18 +1,25 @@
-import './App.css'
-import Home from './pages/Home/Home'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './Components/AuthProvider/AuthProvider';
 import Log from './pages/Log/Log';
+import Home from './pages/Home/Home';
+import './App.css'
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 
-function App() {
-
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/log" element={<Log />} />
-      </Routes>
-    </Router>
-  )
-}
+    <Routes>
+      <Route path="/login" element={<Log />} />
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
+};
 
-export default App
+export default App;

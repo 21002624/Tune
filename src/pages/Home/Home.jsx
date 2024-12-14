@@ -8,32 +8,41 @@ import Mobilenav from '../../Components/Mobilenav/Mobilenav';
 import './Home.css';
 import { songs } from '../../Data/songs';
 import Search from '../../Components/Search/Search';
+import { useAuth } from '../../Components/AuthProvider/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [currentSong, setCurrentSong] = useState(songs[0]);
-  const [isMobile, setIsMobile] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
+  const [isMobile, setIsMobile] = useState(false);
+  const { isAuthenticated } = useAuth(); 
   const [selectedOption, setSelectedOption] = useState('');
-  
+  const navigate = useNavigate();
 
-  // Check if the view is mobile
+  useEffect(() => {
+    // Redirect to login if the user is not authenticated
+    if (!isAuthenticated) {
+      navigate('/login');
+    }
+  }, [isAuthenticated, navigate]);
+
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.matchMedia("(max-width: 800px)").matches);
+      setIsMobile(window.matchMedia('(max-width: 800px)').matches);
     };
 
     checkMobile();
-    window.addEventListener("resize", checkMobile);
+    window.addEventListener('resize', checkMobile);
 
     return () => {
-      window.removeEventListener("resize", checkMobile);
+      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
-  // Handle mobile navigation selection
   const handleOptionSelect = (page) => {
     setCurrentPage(page);
   };
+
 
   const renderMobilePage = () => {
     switch (currentPage) {
@@ -53,21 +62,20 @@ const Home = () => {
       <Header />
       {isMobile ? (
         <>
-          {/* Mobile View */}
           <div className="MobileView">{renderMobilePage()}</div>
           <Playingsong currentSong={currentSong} setCurrentSong={setCurrentSong} onOptionSelect={handleOptionSelect}  selectedOption={selectedOption} />
-          <Mobilenav onOptionSelect={handleOptionSelect} />
+          <Mobilenav onOptionSelect={setCurrentPage} />
         </>
       ) : (
-        <>
-          {/* Desktop View */}
-          <div className="panels">
-            <Sidebar />
-            <Mainpanel />
-            <Rightpanel currentSong={currentSong} />
-          </div>
-          <Playingsong currentSong={currentSong} setCurrentSong={setCurrentSong} />
-        </>
+        <div className="panels">
+          <Sidebar />
+          <Mainpanel />
+          <Rightpanel currentSong={currentSong} />
+          <Playingsong
+            currentSong={currentSong}
+            setCurrentSong={setCurrentSong}
+          />
+        </div>
       )}
     </div>
   );

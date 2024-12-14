@@ -3,9 +3,12 @@ import './Header.css'
 import logo from '../../assets/logo.png';
 import Search from '../../Components/Search/Search';
 import { BellIcon, UserIcon } from '@heroicons/react/24/outline';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
+  const userId = location.state?.userId || localStorage.getItem('userId') || 'Guest';
 
   useEffect(() => {
     const checkMobile = () => {
@@ -30,8 +33,9 @@ const Header = () => {
             <Search />
         </div>
         <div className="rightContainer">
-          <BellIcon className="homeIcon" />
+          <p>{userId}</p>
           <UserIcon className="homeIcon" />
+          <BellIcon className="homeIcon" />
         </div>
     </header>
   )

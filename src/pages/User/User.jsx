@@ -8,7 +8,7 @@ const User = () => {
     <div className='User'>
       <div className="userTopRow">
         <div className='UserImgDiv'>
-          <video loop autoPlay muted controls className='vedioDiv' >
+          <video loop autoPlay muted className='vedioDiv' >
             <source src={userVedio} type="video/mp4" />
           </video>
         </div>

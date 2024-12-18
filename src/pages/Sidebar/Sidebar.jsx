@@ -1,57 +1,96 @@
-import React from 'react'
+import React from 'react';
 import './Sidebar.css';
-import { ArrowPathIcon, HeartIcon, Square3Stack3DIcon, MicrophoneIcon, UserIcon } from '@heroicons/react/24/outline';
-import { SparklesIcon, ChartBarIcon, UserGroupIcon, SignalIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowPathIcon,
+  HeartIcon,
+  Square3Stack3DIcon,
+  MicrophoneIcon,
+  UserIcon,
+  SparklesIcon,
+  ChartBarIcon,
+  UserGroupIcon,
+  SignalIcon,
+} from '@heroicons/react/24/outline';
+import { allCategories } from '../../Data/songs';
 
+const Sidebar = ({ activeCategory, setActiveCategory, activeTab, setActiveTab }) => {
+  const handleSidebarOption = (category) => {
+    setActiveCategory(allCategories[category] || {});
+    const defaultTab = Object.keys(allCategories[category] || {})[0] || null;
+    setActiveTab(defaultTab);
+  };
 
-
-const Sidebar = () => {
   return (
-    <div className='Sidebar'>
-      <div>
+    <div className="sidebar-container">
+      <div className="Sidebar">
         <div className="recentBar">
-            <h2>Browse</h2>
-            <div>
-                <p className="animatedText">
-                    <SparklesIcon className="sideBarIcon" /> New Releases
-                </p>
-                <p className="animatedText">
-                    <ChartBarIcon className="sideBarIcon" /> Top Charts
-                </p>
-                <p className="animatedText">
-                    <UserGroupIcon className="sideBarIcon" /> Top Artists
-                </p>
-                <p className="animatedText">
-                    <SignalIcon className="sideBarIcon" /> Radio
-                </p>
-            </div>
-
+          <h2>Browse</h2>
+          <div>
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('newRelease')}
+            >
+              <SparklesIcon className="sideBarIcon" /> New Releases
+            </p>
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('topChat')}
+            >
+              <ChartBarIcon className="sideBarIcon" /> Top Charts
+            </p>
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('topArtists')}
+            >
+              <UserGroupIcon className="sideBarIcon" /> Top Artists
+            </p>
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('radio')}
+            >
+              <SignalIcon className="sideBarIcon" /> Radio
+            </p>
+          </div>
         </div>
 
         <div className="libraryBar">
-        <h2>Library</h2>
-        <div>
-            <p className="animatedText">
-                <ArrowPathIcon className="sideBarIcon" /> History
+          <h2>Library</h2>
+          <div>
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('history')}
+            >
+              <ArrowPathIcon className="sideBarIcon" /> History
             </p>
-            <p className="animatedText">
-                <HeartIcon className="sideBarIcon" /> Liked Songs
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('liked')}
+            >
+              <HeartIcon className="sideBarIcon" /> Liked Songs
             </p>
-            <p className="animatedText">
-                <Square3Stack3DIcon className="sideBarIcon" /> Albums
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('albums')}
+            >
+              <Square3Stack3DIcon className="sideBarIcon" /> Albums
             </p>
-            <p className="animatedText">
-                <MicrophoneIcon className="sideBarIcon" /> Podcasts
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('podCasts')}
+            >
+              <MicrophoneIcon className="sideBarIcon" /> Podcasts
             </p>
-            <p className="animatedText">
-                <UserIcon className="sideBarIcon" /> Artists
+            <p
+              className="animatedText"
+              onClick={() => handleSidebarOption('playlists')}
+            >
+              <UserIcon className="sideBarIcon" /> Artists
             </p>
-        </div>
-
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

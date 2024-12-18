@@ -122,3 +122,142 @@ export const songs = [
         lyrics : " amma Yamma, the sun will rise, Bright as hope in the endless skies. Dance with joy, feel the beat, Life’s a rhythm, life’s a feat."
     }
 ];
+
+export const allCategories = {
+  playlists: {
+    own: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+    following: [
+      { id: 4, title: 'Top 100', coverImage: coverImg },
+      { id: 5, title: 'Relaxing Beats', coverImage: coverImg },
+      { id: 6, title: 'Indie Classics', coverImage: coverImg },
+    ],
+    collaboration: [
+      { id: 7, title: 'Weekend Jam', coverImage: coverImg },
+      { id: 8, title: 'Road Trip Mix', coverImage: coverImg },
+    ],
+  },
+  newRelease: {
+    hollyhood: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+    tollyhood: [
+      { id: 4, title: 'Top 100', coverImage: coverImg },
+      { id: 5, title: 'Relaxing Beats', coverImage: coverImg },
+      { id: 6, title: 'Indie Classics', coverImage: coverImg },
+    ],
+    kollyhood: [
+      { id: 7, title: 'Weekend Jam', coverImage: coverImg },
+      { id: 8, title: 'Road Trip Mix', coverImage: coverImg },
+    ],
+  },
+  topChat: {
+    vjay: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+    thala: [
+      { id: 4, title: 'Top 100', coverImage: coverImg },
+      { id: 5, title: 'Relaxing Beats', coverImage: coverImg },
+      { id: 6, title: 'Indie Classics', coverImage: coverImg },
+    ],
+    others: [
+      { id: 7, title: 'Weekend Jam', coverImage: coverImg },
+      { id: 8, title: 'Road Trip Mix', coverImage: coverImg },
+    ],
+  },
+  topArtists: {
+    ani: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+    andria: [
+      { id: 4, title: 'Top 100', coverImage: coverImg },
+      { id: 5, title: 'Relaxing Beats', coverImage: coverImg },
+      { id: 6, title: 'Indie Classics', coverImage: coverImg },
+    ],
+    gv_prakesh: [
+      { id: 7, title: 'Weekend Jam', coverImage: coverImg },
+      { id: 8, title: 'Road Trip Mix', coverImage: coverImg },
+    ],
+  },
+  radio: {
+    mokka_commentry: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+    nalna_murukuu: [
+      { id: 4, title: 'Top 100', coverImage: coverImg },
+      { id: 5, title: 'Relaxing Beats', coverImage: coverImg },
+      { id: 6, title: 'Indie Classics', coverImage: coverImg },
+    ],
+    pacha_sattai: [
+      { id: 7, title: 'Weekend Jam', coverImage: coverImg },
+      { id: 8, title: 'Road Trip Mix', coverImage: coverImg },
+    ],
+  },
+  history: {
+    listened: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+  },
+  albums: {
+    vibe: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+    dance: [
+      { id: 4, title: 'Top 100', coverImage: coverImg },
+      { id: 5, title: 'Relaxing Beats', coverImage: coverImg },
+      { id: 6, title: 'Indie Classics', coverImage: coverImg },
+    ],
+    new_collections: [
+      { id: 7, title: 'Weekend Jam', coverImage: coverImg },
+      { id: 8, title: 'Road Trip Mix', coverImage: coverImg },
+    ],
+  },
+  podCasts: {
+    p24: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+    p25: [
+      { id: 4, title: 'Top 100', coverImage: coverImg },
+      { id: 5, title: 'Relaxing Beats', coverImage: coverImg },
+      { id: 6, title: 'Indie Classics', coverImage: coverImg },
+    ],
+    p26: [
+      { id: 7, title: 'Weekend Jam', coverImage: coverImg },
+      { id: 8, title: 'Road Trip Mix', coverImage: coverImg },
+    ],
+  },
+  artist: {
+    arr: [
+      { id: 1, title: 'Workout Vibes', coverImage: coverImg },
+      { id: 2, title: 'Chill Evenings', coverImage: coverImg },
+      { id: 3, title: 'Party Hits', coverImage: coverImg },
+    ],
+    karthick: [
+      { id: 4, title: 'Top 100', coverImage: coverImg },
+      { id: 5, title: 'Relaxing Beats', coverImage: coverImg },
+      { id: 6, title: 'Indie Classics', coverImage: coverImg },
+    ],
+    str: [
+      { id: 7, title: 'Weekend Jam', coverImage: coverImg },
+      { id: 8, title: 'Road Trip Mix', coverImage: coverImg },
+    ],
+  },
+  
+};
